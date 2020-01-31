@@ -17,7 +17,7 @@ class NullSessionHandler implements SessionHandlerInterface
      *
      * @returns bool Returns true if the session was initialized and false if not.
      */
-    public function open(string $savePath, string $sessionName)
+    public function open(string $savePath, string $sessionName): bool
     {
         return true;
     }
@@ -76,7 +76,7 @@ class NullSessionHandler implements SessionHandlerInterface
      *
      * @return bool Returns true if the old sessions was destroyed.
      */
-    public function gc($lifetime)
+    public function gc($lifetime): bool
     {
         return true;
     }
