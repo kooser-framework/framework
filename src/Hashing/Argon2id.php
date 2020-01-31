@@ -34,7 +34,7 @@ final class Argon2id extends AbstractHasher implements Hasher
      *
      * @param array $options The argon2id hasher options.
      *
-     * @return \Rebel\Hashing\Hasher Returns the hasher.
+     * @return \Kooser\Hashing\Hasher Returns the hasher.
      */
     public function setOptions(array $options = []): Hasher
     {
