@@ -34,7 +34,7 @@ final class Bcrypt extends AbstractHasher implements Hasher
      *
      * @param array $options The bcrypt hasher options.
      *
-     * @return \Rebel\Hashing\Hasher Returns the hasher.
+     * @return \Kooser\Hashing\Hasher Returns the hasher.
      */
     public function setOptions(array $options = []): Hasher
     {
