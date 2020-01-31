@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Rebel\Hashing;
+namespace Kooser\Hashing;
 
 /**
  * Defines any extra hasher methods in an abstract scope.
