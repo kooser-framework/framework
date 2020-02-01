@@ -2,7 +2,7 @@
 /**
  * @see       <https://github.com/kooser-framework/framework> for the canonical source repository
  * @copyright <https://github.com/kooser-framework/framework/blob/master/copyright> Framework Copyright
- * @license   <https://github.com/kooser-framework/framework/blob/master/license> New BSD License
+ * @license   <https://github.com/kooser-framework/framework/blob/master/license> MIT License
  */
 
 namespace Kooser\Hashing;
