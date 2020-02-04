@@ -1,0 +1,24 @@
+{
+    "name": "kooser-framework/framework",
+    "description": "A simple and secure php framework to enhance your web applications performance.",
+    "homepage": "https://github.com/kooser-framework",
+    "keywords": [],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.4",
+        "symfony/options-resolver": "^5.0"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^3",
+        "phpunit/phpunit": "^8.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kooser\\": "./src"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "prefer-stable": true
+}
