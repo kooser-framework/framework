@@ -47,6 +47,43 @@ final class Session implements Manager
     }
 
     /**
+     * Start a new session.
+     *
+     * @return bool Returns true if the session has started and false if not.
+     */
+    public function start(): bool
+    {
+        if ($this->exists()) {
+            return true;
+        }
+        
+        return session_start();
+    }
+
+    /**
+     * Destroy the currently active session.
+     *
+     * @return bool Returns true if the session has been destroyed and false if not.
+     */
+    public function destroy()
+    {
+        $_SESSION = [];
+        if (ini_get('session.use_cookies')) {
+            $params = session_get_cookie_params();
+            setcookie(
+                session_name(),
+                '',
+                time() - 42000,
+                $params['path'],
+                $params['domain'],
+                $params['secure'], 
+                $params['httponly']
+            );
+        }
+        return session_destroy();
+    }
+
+    /**
      * Sets user-level session storage functions.
      *
      * @param \SessionHandlerInterface $sessionHandler   The user-level session storage.
