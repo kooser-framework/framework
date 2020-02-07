@@ -7,6 +7,7 @@
 
 namespace Kooser\Session;
 
+use SessionHandlerInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
@@ -41,7 +42,21 @@ final class Session implements Manager
         $resolver = new OptionsResolver();
         $this->configureOptions($resolver);
         $this->options = $resolver->resolve($options);
+        $this->setSaveHandler(new NativeSessionHandler());
         return $this;
+    }
+
+    /**
+     * Sets user-level session storage functions.
+     *
+     * @param \SessionHandlerInterface $sessionHandler   The user-level session storage.
+     * @param bool                     $registerShutdown Should we resiter the shutdown function.
+     *
+     * @return void Returns nothing.
+     */
+    public function setSaveHandler(SessionHandlerInterface $sessionHandler, bool $registerShutdown = true): void
+    {
+        session_set_save_handler($registerShutdown, true);
     }
 
     /**
