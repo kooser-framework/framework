@@ -56,7 +56,7 @@ final class Session implements Manager
      */
     public function setSaveHandler(SessionHandlerInterface $sessionHandler, bool $registerShutdown = true): void
     {
-        session_set_save_handler($registerShutdown, true);
+        session_set_save_handler($sessionHandler, $registerShutdown);
     }
 
     /**
