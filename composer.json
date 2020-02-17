@@ -1,16 +1,36 @@
 {
     "name": "kooser-framework/framework",
-    "description": "A simple and secure php framework to enhance your web applications performance.",
+    "description": "The basic tools for creating you hearts desire.",
     "homepage": "https://github.com/kooser-framework",
     "keywords": [],
     "license": "MIT",
     "require": {
         "php": ">=7.4",
-        "symfony/options-resolver": "^5.0"
+        "symfony/cache": "^5.0",
+        "symfony/filesystem": "^5.0",
+        "symfony/finder": "^5.0",
+        "symfony/google-mailer": "^5.0",
+        "symfony/mailchimp-mailer": "^5.0",
+        "symfony/mailer": "^5.0",
+        "symfony/mailgun-mailer": "^5.0",
+        "symfony/mime": "^5.0",
+        "symfony/options-resolver": "^5.0",
+        "symfony/polyfill-apcu": "^5.0",
+        "symfony/polyfill-ctype": "^5.0",
+        "symfony/polyfill-mbstring": "^5.0",
+        "symfony/polyfill-uuid": "^5.0",
+        "symfony/postmark-mailer": "^5.0",
+        "symfony/property-access": "^5.0",
+        "symfony/property-info": "^5.0",
+        "symfony/sendgrid-mailer": "^5.0",
+        "symfony/serializer": "^5.0",
+        "symfony/templating": "^5.0",
+        "symfony/translation": "^5.0",
+        "symfony/validator": "^5.0"
     },
     "require-dev": {
         "vimeo/psalm": "^3",
-        "phpunit/phpunit": "^9.0"
+        "phpunit/phpunit": "^8.4"
     },
     "autoload": {
         "psr-4": {
@@ -18,7 +38,8 @@
         }
     },
     "config": {
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "sort-packages": true
     },
     "prefer-stable": true
 }
