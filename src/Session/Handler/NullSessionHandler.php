@@ -81,7 +81,7 @@ class NullSessionHandler implements SessionHandlerInterface
      *
      * @return bool Returns true if the old sessions was destroyed.
      */
-    public function gc($lifetime): bool
+    public function gc(int $lifetime): bool
     {
         return true;
     }
