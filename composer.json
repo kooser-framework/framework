@@ -10,7 +10,7 @@
     },
     "require-dev": {
         "vimeo/psalm": "^3",
-        "phpunit/phpunit": "^8.4"
+        "phpunit/phpunit": "^9.0"
     },
     "autoload": {
         "psr-4": {
